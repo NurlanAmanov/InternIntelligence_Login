@@ -7,6 +7,20 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
+function passshows() {  
+  const pass = document.getElementById('password'); 
+  const hideshow2 = document.getElementById('passimg');
+
+  if (pass.type === 'password') {
+      pass.type = 'text';  
+      hideshow2.src = "../img/password-show.svg";  
+  } else {
+      pass.type = 'password'; 
+      hideshow2.src = "../img/password-hide.svg";  
+  }
+}
 const firebaseConfig = {
   apiKey: "AIzaSyDavGpRmSUSkg0-qkqlyPumxFDwUN_QEWc",
   authDomain: "login-intelin.firebaseapp.com",
@@ -64,3 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   });
+
+
+
